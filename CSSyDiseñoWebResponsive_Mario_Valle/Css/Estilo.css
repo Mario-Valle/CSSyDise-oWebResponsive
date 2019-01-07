@@ -1,0 +1,305 @@
+@font-face
+{
+    font-family: Dancing-Script;
+    src: url(../Fuente/Dancing-Script-Regular_ttf.ttf);
+}
+
+
+body
+{
+    font-family: Dancing-Script;
+    background-color: #02010a;
+    margin: auto;    
+    width: 900px;    
+}
+
+header
+{
+    background-color: #5b7989;
+    text-align: left;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 10px 0px 10px;
+    height: 10%; 
+}
+
+header h1
+{
+    margin: 0px;
+    text-shadow: 2px 2px 2px  #02010a;    
+    display: inline-block;
+    -webkit-display: inline-block;   
+}
+header 
+{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein 
+{
+    0%  {margin-top: 150%;}
+    60% {margin-top: -5%;}
+    100%{margin-top: 0%;}
+}
+
+@-webkit-keyframes slidein 
+{
+    0%  {margin-top: 150%;}
+    60% {margin-top: -5%;}
+    100%{margin-top: 0%;}
+}
+
+
+#menu-principal 
+{
+    margin-left: 35%;
+    display: inline-block;
+    -webkit-display: inline-block;
+    text-align:center;
+}
+
+#menu-principal a
+{
+    color: white;
+}
+
+/*Subrayar las etiquetas "a" que tienen el atributo "href"*/
+#menu-principal a[href] 
+{
+    text-decoration: underline;
+}
+
+/* Quitamos Subrayado a[id="pagPrincipal"]*/
+#menu-principal a[id="pagPrincipal"] 
+{    
+    text-decoration: none;
+}
+
+#menu-principal a:hover 
+{
+    text-decoration: underline;
+}
+
+#menu-principal a + a::before 
+{
+    content: "  ";
+    color: ;
+}
+
+
+#ImagenCentral 
+{
+    background-color:  #82c3a6;
+}
+
+#ImagenSecundaria 
+{
+    background-color: #d5c75f;
+}
+
+/*Crea una diagramación de tres filas con display flex.*/
+#ImagenCentral
+{
+    display: flex;
+    flex-direction: row;
+    -webkit-display: flex;
+    -webkit-flex-direction: row;
+}
+
+#ImagenSecundaria
+{
+    display: flex;
+    flex-direction: row;
+    -webkit-display: flex;
+    -webkit-flex-direction: row;
+}
+
+/*Agrega a la clase column diagramación en columnas con:*/
+#contenido
+ {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    -webkit-display: flex;
+    -webkit-flex-direction: column;
+}
+
+/*Diagramación de 1 columnas 100%*/
+#ImagenCentral img 
+{
+    text-align: center;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+/*Diagramación de 2 columnas 50%*/
+#ImagenSecundaria > div 
+{
+    padding: 2px;
+    width: 96%;
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+
+#ImagenCentral img[src$=jpg]
+{
+    width: 40%;
+    height: 80%;
+    box-shadow: 10px 10px 0px #82c3a6;
+}
+
+#ImagenSecundaria img[src$=jpg]
+{
+    width: 96%;
+    height: 80%;
+    border:1px solid black; 
+    box-shadow: 10px 10px 0px #82c3a6;
+}
+
+img[id="idPaisaje" ]:hover
+{
+    transform: rotate(10deg);
+
+}
+
+img[id="idRetrato" ]:hover
+{
+    transform: translateY(-5px);
+    transform: translateX(40px);
+    transform: translate3d(20px, -5px, 0px);
+}
+
+footer
+{
+    margin-top: 0px;
+    padding-top: 10px;
+    background-color: #C6d5c5;
+    text-align: left;
+    color: black;
+    border-radius: 0px 0px 10px 10px;
+    padding: 0px 10px 0px 10px;
+    height: 10%;
+    /*border-top: solid 1px black;*/
+}
+
+/*Diagramación*/
+.Fcontenedor
+{
+    display: flex;
+    flex-direction: row;
+    -webkit-display: flex;
+    -webkit-flex-direction: row;
+}
+
+.Fcontenedor > div > h3 
+{
+    margin: 0;
+}
+
+/*Columnas, tendrá un cuarto del espacio 25%*/
+#disponible .Fcontenedor > div 
+{
+    text-align: center;
+    padding: 10px;
+    width: 25%;
+}
+
+.RedesSociales img
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px; 
+    display: inline;
+    -webkit-display: inline;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+/*Aplicando Responsive*/
+
+@media (max-width: 899px) 
+{
+    body
+    {
+    margin: auto;
+    width: 100%;
+    }
+
+    header h1
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    #menu-principal  
+    {
+        margin: auto; 
+        float: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    section
+    {
+        display: flex;
+        flex-direction: column;
+        -webkit-display: flex;
+        -webkit-flex-direction: column;
+    }
+
+
+    #ImagenSecundaria
+    {
+        display: flex;
+        flex-direction: column;
+        -webkit-display: flex;
+        -webkit-flex-direction: column;
+    }
+
+      #ImagenCentral img[src$=jpg]
+    {
+        width: 75%;
+        height: 100%;
+        margin: auto;
+    }
+
+    #ImagenSecundaria img[src$=jpg]
+    {
+        width: 80%;
+        height: 60%;
+        margin: auto;
+    }
+
+    .Fcontenedor
+    {
+        display: flex;
+        flex-direction: column;
+        -webkit-display: flex;
+        -webkit-flex-direction: column;
+        padding: 10px;
+    }
+
+    #disponible .Fcontenedor > div 
+    {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+
+
